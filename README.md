@@ -3,6 +3,8 @@
 
 This project includes the deployment of a MongoDB instance and a mongo-express UI using Kubernetes. The deployment and service objects for both MongoDB and mongo-express are defined in YAML format in the following files:
 
+Architecture of the project
+
 ![Alt text](media/2.png)
 
 Here is a structure for the project:
@@ -32,31 +34,31 @@ project/
 
 ## kubectl apply commands in order
 
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f mongo.yaml
-kubectl apply -f mongo-configmap.yaml
-kubectl apply -f mongo-express.yaml
++ kubectl apply -f mongo-secret.yaml
++ kubectl apply -f mongo.yaml
++ kubectl apply -f mongo-configmap.yaml
++ kubectl apply -f mongo-express.yaml
 
 
 
 ## kubectl get commands
 
-kubectl get pod
-kubectl get pod --watch
-kubectl get pod -o wide
-kubectl get service
-kubectl get secret
-kubectl get all | grep mongodb
++ kubectl get pod
++ kubectl get pod --watch
++ kubectl get pod -o wide
++ kubectl get service
++ kubectl get secret
++ kubectl get all | grep mongodb
 
 
 ## kubectl debugging commands
 
-kubectl describe pod mongodb-deployment-xxxxxx
-kubectl describe service mongodb-service
-kubectl logs mongo-express-xxxxxx
++ kubectl describe pod mongodb-deployment-xxxxxx
++ kubectl describe service mongodb-service
++ kubectl logs mongo-express-xxxxxx
 
 
 
 ## give a URL to external service in minikube
 
-minikube service mongo-express-service
++ minikube service mongo-express-service
